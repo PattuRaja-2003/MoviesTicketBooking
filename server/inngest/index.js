@@ -6,7 +6,7 @@ export const inngest = new Inngest({ id: "movie-ticket-booking" });
 // Inngest Function to Create user Data in dateBase
 const syncUserCreation = inngest.createFunction(
   {
-    id: "sync-user-from-clerk",
+    id: "sync-user-creation",
     triggers: [{ event: "clerk/user.created" }],
   },
   async ({ event }) => {
@@ -26,7 +26,7 @@ const syncUserCreation = inngest.createFunction(
 
 const syncUserDeletion = inngest.createFunction(
   {
-    id: "sync-user-from-clerk",
+    id: "sync-user-deletion",
     triggers: [{ event: "clerk/user.deleted" }],
   },
   async ({ event }) => {
@@ -39,7 +39,7 @@ const syncUserDeletion = inngest.createFunction(
 
 const syncUserUpdation = inngest.createFunction(
   {
-    id: "sync-user-from-clerk",
+    id: "sync-user-updation",
     triggers: [{ event: "clerk/user.updated" }],
   },
   async ({ event }) => {
